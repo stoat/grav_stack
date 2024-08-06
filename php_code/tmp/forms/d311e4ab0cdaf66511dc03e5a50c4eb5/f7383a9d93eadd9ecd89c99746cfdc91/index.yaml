@@ -1,0 +1,31 @@
+form: flex-pages
+id: 'tmp://forms/session/f7383a9d93eadd9ecd89c99746cfdc91'
+unique_id: f7383a9d93eadd9ecd89c99746cfdc91
+url: '/pages/home/about-anna-magee/:add'
+user:
+  username: chris
+  email: chris.mewton@gmail.com
+timestamps:
+  created: 1722864252
+  updated: 1722864252
+data: null
+files: {  }
+object:
+  type: pages
+  key: home/about-anna-magee
+  storage_key: ''
+  timestamp: 0
+  serialized:
+    __META: {  }
+    storage_key: ''
+    parent_key: 01.home
+    order: false
+    folder: about-anna-magee
+    template: default
+    lang: ''
+    root: false
+    route: /home
+    name: default
+    header:
+      title: 'About Anna Magee'
+    frontmatter: "title: 'About Anna Magee'\n"

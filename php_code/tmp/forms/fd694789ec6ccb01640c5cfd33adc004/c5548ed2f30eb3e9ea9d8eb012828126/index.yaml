@@ -1,0 +1,31 @@
+form: flex-pages
+id: 'tmp://forms/session/c5548ed2f30eb3e9ea9d8eb012828126'
+unique_id: c5548ed2f30eb3e9ea9d8eb012828126
+url: '/pages/info/:add'
+user:
+  username: chris
+  email: chris.mewton@gmail.com
+timestamps:
+  created: 1722607716
+  updated: 1722607716
+data: null
+files: {  }
+object:
+  type: pages
+  key: info
+  storage_key: ''
+  timestamp: 0
+  serialized:
+    __META: {  }
+    storage_key: ''
+    parent_key: ''
+    order: '04.'
+    folder: info
+    template: default
+    lang: ''
+    root: false
+    route: /
+    name: default
+    header:
+      title: info
+    frontmatter: "title: info\n"
