@@ -1,0 +1,15 @@
+{% if page.header.event.freq is defined or page.header.event.repeat is defined or page.header.event.until is defined %}
+<p class="event-meta {{ event_class }}">
+{% if page.header.event.freq is defined %}
+    <span>{{ "PLUGIN_EVENTS.META.REPEATS"|t }} {{ ("PLUGIN_EVENTS.EVENTS.FREQ_"~page.header.event.freq|upper)|t }}</span>
+{% endif %}
+
+{% if page.header.event.repeat is defined %}
+    <span>{{ "PLUGIN_EVENTS.META.ON"|t }} {{ page.header.event.repeat }}</span>
+{% endif %}
+
+{% if page.header.event.until is defined %}
+    <span>{{ "PLUGIN_EVENTS.META.UNTIL"|t }} {{ page.header.event.until|td }}</span>
+{% endif %}
+</p>
+{% endif %}

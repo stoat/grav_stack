@@ -1,0 +1,141 @@
+title: Event
+'@extends':
+    type: default
+    context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      fields:
+
+        event:
+          type: tab
+          title: Event
+          fields:
+            header.event.status-section:
+              type: section
+              title: Status
+              underline: true
+            header.event.status:
+              label: Status
+              type: select
+              default: ""
+              options:
+                "": "None"
+                "scheduled": "scheduled"
+                "postponed": "postponed"
+                "cancelled": "cancelled"
+              title: Status
+              help: Possible values are scheduled, postponed, cancelled.
+            header.event.dt-section:
+              type: section
+              title: Date & Time
+              underline: true
+            header.event.doors_open:
+              type: datetime
+              label: PLUGIN_EVENTS.EVENTS.DOORS_OPEN
+              help: Use the date selector to enter a doors open date and time for this event.
+            header.event.start:
+              type: datetime
+              label: Start
+              help: Use the date selector to enter a start date and time for this event.
+              validate:
+                type: required
+            header.event.end:
+              type: datetime
+              label: End
+              help: Use the date selector to enter an end date and time for this event.
+              validate:
+                type: required
+            header.event.repeat:
+              type: text
+              label: Repeat
+              help: Using MTWRFSU to specify what days of the week this event repeats. For example, MWF.
+              placeholder: MTWRFSU
+            header.event.freq:
+              type: select
+              label: Frequency
+              help: How often should this event repeat?
+              default: none
+              options:
+                'none': PLUGIN_EVENTS.EVENTS.FREQ_NONE
+                'daily': PLUGIN_EVENTS.EVENTS.FREQ_DAILY
+                'weekly': PLUGIN_EVENTS.EVENTS.FREQ_WEEKLY
+                'monthly': PLUGIN_EVENTS.EVENTS.FREQ_MONTHLY
+                'yearly': PLUGIN_EVENTS.EVENTS.FREQ_YEARLY
+            header.event.until:
+              type: datetime
+              label: Until
+              help: How long should this event repeat? (3 months automatically if Repeat or Frequency are set)
+            header.event.author-section:
+              type: section
+              title: Authors & Organizers
+              underline: true
+            header.event.authors:
+              type: array
+              label: Enter author name or event category to dispaly as subtitle.
+              required: true
+              value_only: true
+            header.event.organizers:
+              type: array
+              label: Organizers
+              placeholder_key: Name
+              placeholder_value: URL
+              required: true
+            header.event.topic:
+              type: array
+              label: Topic
+              required: true
+              value_only: true
+            header.event.exceptions-section:
+              type: section
+              title: Exceptions
+              underline: true
+            header.event.exceptions:
+              type: list
+              style: vertical
+              name: exceptions
+              label: Enter dates this repeating/reoccuring event will not meet.
+              fields:
+                .date:
+                  type: date
+                  label: Date
+            header.event.ticket-section:
+              type: section
+              underline: true
+              title: Ticket
+            header.event.ticket_show:
+              label: Show
+              type: select
+              options:
+                "hidden": "Hidden"
+                "free": "Free"
+                "price": "Price"
+              title: Show events as free, price or just without information
+            header.event.ticket_price:
+              type: text
+              label: Price
+              placeholder: "9.00 $"
+            header.event.ticket_link:
+              type: text
+              label: Ticket Link
+              help: Paste link to Ticketsystem here
+            header.event.location-section:
+              type: section
+              title: Location
+              underline: true
+            header.event.location:
+              type: text
+              label: Location
+              help: Where is this event located? If you enter an address it will be geocoded below.
+            header.event.coordinates:
+              type: text
+              label: Coordinates
+              placeholder: Latitude, Longitude
+              help: These are automatically generated from the location field.
+            header.event.city:
+              type: hidden
+            header.event.zip:
+              type: hidden
+            header.event.country:
+              type: hidden

@@ -1,0 +1,19 @@
+enabled: true
+from: contact@mewton.net
+to: chris.mewton@gmail.com
+mailer:
+  engine: mailersend
+  smtp:
+    server: localhost
+    port: 25
+    encryption: none
+    user: null
+    password: null
+  sendmail:
+    bin: '/usr/sbin/sendmail -bs'
+content_type: text/html
+debug: false
+cc: null
+bcc: null
+reply_to: null
+body: null

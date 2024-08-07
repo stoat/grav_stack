@@ -1,0 +1,57 @@
+form: flex-pages-raw
+id: 'tmp://forms/session/423c6b97daa6ddb1236fbe34df0e5f54'
+unique_id: 423c6b97daa6ddb1236fbe34df0e5f54
+url: 'http://localhost/admin/pages/home/blog'
+user:
+  username: chris
+  email: chris.mewton@gmail.com
+timestamps:
+  created: 1723043035
+  updated: 1723043051
+data:
+  frontmatter: "title: Blog\nbody_classes: 'title-h1h2 header-dark header-transparent'\ncontent:\n    items: '@self.modular'"
+  content: 'Welcome to my blog'
+  ordering: true
+  folder: blog
+  route: /
+  name: blog
+  order: null
+  blueprint: null
+  header:
+    content:
+      items: '@self.modular'
+    media_order: null
+  xss_check: null
+files: {  }
+object:
+  type: pages
+  key: home/blog
+  storage_key: 01.home/01.blog
+  timestamp: 1723042921
+  serialized:
+    __META:
+      key: home/blog
+      storage_key: 01.home/01.blog
+      template: blog
+      storage_timestamp: 1723042921
+      markdown:
+        '': { blog: 1723042318 }
+      children:
+        blog-post-number-1: false
+      checksum: 866220176c978a0e2fa648c15233dd3e
+    storage_key: 01.home/01.blog
+    parent_key: 01.home
+    order: '01.'
+    folder: blog
+    template: blog
+    lang: ''
+    header:
+      title: Blog
+      body_classes: 'title-h1h2 header-dark header-transparent'
+      content:
+        items: '@self.modular'
+    root: false
+    frontmatter: "title: Blog\nbody_classes: 'title-h1h2 header-dark header-transparent'\ncontent:\n    items: '@self.modular'"
+    markdown: 'Welcome to my blog'
+    slug: blog
+    name: blog.md

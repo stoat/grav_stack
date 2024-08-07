@@ -1,0 +1,19 @@
+<div class="event-item-left-column">
+	<a href="{{ event.url }}" class="event-item-image-box" style="background-image: url({{ event.media.images|first.cropResize(400,400).url() }})">
+		<time class="event-item-time dt-start" datetime="{{ event.header.event.start|date("c") }}">{{ event.header.event.start|td(null, config.plugins.events.calendar.details.time) }}</time>
+	</a>
+</div>
+<div class="event-item-right-column">
+	<p class="event-item-title">
+		{% if (config.plugins.events.event_meta.display_location) and (event.header.event.location is not empty) %}
+		<a href="{{ event.url }}" class="p-name u-url" title="{{ event.header.event.location }}">{{ event.title }}<span class="location-pin"></span></a>
+		{% else %}
+		<a href="{{ event.url }}" class="p-name u-url">{{ event.title }}</a>
+		{% endif %}
+	</p>
+	{% set summary = event.summary(50)|slice(3, 50) %}
+	{% if not summary %}
+	{% set summary = ' ' %}
+	{% endif %}
+	<p class="event-item-summary">{{ summary }}</p>
+</div>

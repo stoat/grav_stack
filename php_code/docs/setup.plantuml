@@ -1,0 +1,13 @@
+@startuml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Context.puml
+skinparam style strictuml
+skinparam SequenceMessageAlignment center
+
+LAYOUT_WITH_LEGEND()
+title Container diagram for Grav CMS
+
+System(WebServer, "Web Server", "Nginx Webserver") 
+System(Codebase, "PHP Stack", "Grav CMS Github")
+BiRel(WebServer,Codebase,"Http Exchange")
+
+@enduml
